@@ -318,3 +318,8 @@ ul li::before {
   right: 10px;
 }
 
+/* 상장 닫기 */
+
+#awardImageModal button:hover {
+  background-color: var(--btn-hover-bg);
+}
