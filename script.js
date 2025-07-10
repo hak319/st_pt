@@ -21,24 +21,8 @@ function showSection(id) {
 // 슬라이더 인덱스 관리용 객체
 const sliderIndices = {};
 
-// 슬라이드 이동 함수
+// 슬라이드 이동 함수 (id와 이동값 받음)
 function moveSlide(sliderId, n) {
-  // id가 없으면 기본 슬라이더로 동작 (id: 'slides')
-  if (!sliderId) {
-    const slides = document.getElementById("slides");
-    if (!slides) return;
-    const totalSlides = slides.children.length;
-
-    if (!sliderIndices['default']) sliderIndices['default'] = 0;
-    sliderIndices['default'] += n;
-    if (sliderIndices['default'] < 0) sliderIndices['default'] = totalSlides - 1;
-    if (sliderIndices['default'] >= totalSlides) sliderIndices['default'] = 0;
-
-    slides.style.transform = `translateX(-${sliderIndices['default'] * 100}%)`;
-    return;
-  }
-
-  // sliderId가 있는 경우: 여러 슬라이더 구분
   const slider = document.querySelector(`.slider[data-slider-id="${sliderId}"]`);
   if (!slider) return;
 
@@ -46,7 +30,7 @@ function moveSlide(sliderId, n) {
   const totalSlides = slides.children.length;
 
   if (!(sliderId in sliderIndices)) {
-    sliderIndices[sliderId] = 0; // 초기값 세팅
+    sliderIndices[sliderId] = 0; // 초기 인덱스 세팅
   }
 
   sliderIndices[sliderId] += n;
@@ -55,4 +39,19 @@ function moveSlide(sliderId, n) {
   if (sliderIndices[sliderId] >= totalSlides) sliderIndices[sliderId] = 0;
 
   slides.style.transform = `translateX(-${sliderIndices[sliderId] * 100}%)`;
+}
+
+//하나짜리
+
+let index = 0;
+function moveSlideSimple(n) {
+  const slides = document.getElementById("slides");
+  if (!slides) return;
+  const totalSlides = slides.children.length;
+
+  index += n;
+  if (index < 0) index = totalSlides - 1;
+  if (index >= totalSlides) index = 0;
+
+  slides.style.transform = `translateX(-${index * 100}%)`;
 }
