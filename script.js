@@ -57,3 +57,12 @@ function moveSlideSimple(n) {
   slides.style.transform = `translateX(-${index * 100}%)`;
 }
 
+//상장 항목
+function showAwardImage() {
+  document.getElementById('awardImageModal').style.display = 'flex';
+}
+
+function closeAwardImage() {
+  document.getElementById('awardImageModal').style.display = 'none';
+}
+
