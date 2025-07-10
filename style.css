@@ -21,10 +21,16 @@
   margin-right: 2rem;
   text-decoration: none;
 
-  cursor: default;         /* 손가락 포인터 ❌ */
-  pointer-events: auto;    /* 클릭 동작은 유지 */
-  user-select: none;       /* 텍스트 드래그 ❌ */
-  outline: none;           /* 포커스 테두리 ❌ */
+  cursor: default;
+  pointer-events: auto;
+  user-select: none;
+  outline: none;
+}
+
+.logo:hover {
+  background-color: transparent !important;
+  color: var(--primary-color) !important;
+  box-shadow: none !important;
 }
 
 body.dark {
