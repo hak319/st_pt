@@ -23,7 +23,7 @@ const sliderIndices = {};
 
 // 슬라이드 이동 함수 (id와 이동값 받음)
 function moveSlide(sliderId, n) {
-  const slider = document.querySelector(.slider[data-slider-id="${sliderId}"]);
+  const slider = document.querySelector(`.slider[data-slider-id="${sliderId}"]`);
   if (!slider) return;
 
   const slides = slider.querySelector('.slides');
@@ -38,8 +38,9 @@ function moveSlide(sliderId, n) {
   if (sliderIndices[sliderId] < 0) sliderIndices[sliderId] = totalSlides - 1;
   if (sliderIndices[sliderId] >= totalSlides) sliderIndices[sliderId] = 0;
 
-  slides.style.transform = translateX(-${sliderIndices[sliderId] * 100}%);
+  slides.style.transform = `translateX(-${sliderIndices[sliderId] * 100}%)`;
 }
+
 
 //하나짜리
 
@@ -53,5 +54,5 @@ function moveSlideSimple(n) {
   if (index < 0) index = totalSlides - 1;
   if (index >= totalSlides) index = 0;
 
-  slides.style.transform = translateX(-${index * 100}%);
+  slides.style.transform = `translateX(-${index * 100}%)`;
 }
