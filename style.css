@@ -234,16 +234,6 @@ body.dark tbody tr {
   background-color: #2a3748;
 }
 
-.logo {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--primary-color);
-  white-space: nowrap;
-  margin-right: 2rem;
-  text-decoration: none; /* ✅ 밑줄 제거 */
-}
-
-
 tbody tr:hover {
   background-color: var(--accent-color);
   color: white;
