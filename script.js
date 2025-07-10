@@ -1,57 +1,60 @@
+// 섹션 보여주기 함수
 function showSection(id) {
-    const sections = document.querySelectorAll('.section');
-    sections.forEach(s => {
-      s.classList.remove('active');
-      s.style.display = 'none';
-    });
-  
-    const target = document.getElementById(id);
-    target.style.display = 'block';
-    setTimeout(() => {
-      target.classList.add('active');
-    }, 10);
-  
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-  
-  function toggleDarkMode() {
-    document.body.classList.toggle('dark');
-  }
-  
-// 슬라이더 인덱스 관리용 객체
-const sliderIndices = {};
+  const sections = document.querySelectorAll('.section');
+  sections.forEach(section => {
+    section.classList.toggle('active', section.id === id);
+  });
+}
 
-// 슬라이드 이동 함수 (id와 이동값 받음)
-function moveSlide(sliderId, n) {
+// 다크 모드 토글
+function toggleDarkMode() {
+  document.body.classList.toggle('dark-mode');
+}
+
+// 단순 슬라이더 (id 없이 하나의 슬라이더용)
+function moveSlideSimple(step) {
+  const slides = document.querySelector('#slides');
+  if (!slides) return;
+
+  const totalSlides = slides.children.length;
+  const currentTransform = slides.style.transform;
+  let currentIndex = 0;
+
+  if (currentTransform) {
+    const match = currentTransform.match(/translateX\(-(\d+)00%\)/);
+    if (match) {
+      currentIndex = parseInt(match[1], 10);
+    }
+  }
+
+  let newIndex = currentIndex + step;
+  if (newIndex >= totalSlides) newIndex = 0;
+  if (newIndex < 0) newIndex = totalSlides - 1;
+
+  slides.style.transform = `translateX(-${newIndex}00%)`;
+}
+
+// 여러 슬라이더 관리 함수 (data-slider-id 이용)
+function moveSlide(sliderId, step) {
   const slider = document.querySelector(`.slider[data-slider-id="${sliderId}"]`);
   if (!slider) return;
 
   const slides = slider.querySelector('.slides');
   const totalSlides = slides.children.length;
 
-  if (!(sliderId in sliderIndices)) {
-    sliderIndices[sliderId] = 0; // 초기 인덱스 세팅
+  const currentTransform = slides.style.transform;
+  let currentIndex = 0;
+
+  if (currentTransform) {
+    const match = currentTransform.match(/translateX\(-(\d+)00%\)/);
+    if (match) {
+      currentIndex = parseInt(match[1], 10);
+    }
   }
 
-  sliderIndices[sliderId] += n;
+  let newIndex = currentIndex + step;
+  if (newIndex >= totalSlides) newIndex = 0;
+  if (newIndex < 0) newIndex = totalSlides - 1;
 
-  if (sliderIndices[sliderId] < 0) sliderIndices[sliderId] = totalSlides - 1;
-  if (sliderIndices[sliderId] >= totalSlides) sliderIndices[sliderId] = 0;
-
-  slides.style.transform = `translateX(-${sliderIndices[sliderId] * 100}%)`;
-}
-
-//하나짜리
-
-let index = 0;
-function moveSlideSimple(n) {
-  const slides = document.getElementById("slides");
-  if (!slides) return;
-  const totalSlides = slides.children.length;
-
-  index += n;
-  if (index < 0) index = totalSlides - 1;
-  if (index >= totalSlides) index = 0;
-
-  slides.style.transform = `translateX(-${index * 100}%)`;
+  slides.style.transform = `translateX(-${newIndex}00%)`;
 }
