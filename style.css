@@ -20,17 +20,6 @@
   white-space: nowrap;
   margin-right: 2rem;
   text-decoration: none;
-
-  cursor: default;
-  pointer-events: auto;
-  user-select: none;
-  outline: none;
-}
-
-.logo:hover {
-  background-color: transparent !important;
-  color: var(--primary-color) !important;
-  box-shadow: none !important;
 }
 
 body.dark {
