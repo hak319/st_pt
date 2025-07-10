@@ -58,11 +58,21 @@ function moveSlideSimple(n) {
 }
 
 //상장 항목
-function showAwardImage() {
-  document.getElementById('awardImageModal').style.display = 'flex';
+function showAwardImage(row) {
+  const imgUrl = row.getAttribute('data-img');
+  const modal = document.getElementById('awardImageModal');
+  const img = document.getElementById('awardImage');
+
+  if(imgUrl) {
+    img.src = imgUrl;
+    modal.style.display = 'flex';
+  }
 }
 
 function closeAwardImage() {
-  document.getElementById('awardImageModal').style.display = 'none';
+  const modal = document.getElementById('awardImageModal');
+  modal.style.display = 'none';
 }
+
+
 
