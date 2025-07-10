@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>이은학 포트폴리오</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <div class="logo">이은학 포트폴리오</div>
+    <a href="#" onclick="showSection('home')">🏠 홈</a>
+    <a href="#" onclick="showSection('skills')">🛠 사용튤</a>
+    <a href="#" onclick="showSection('works')">🎨 작업물</a>
+    <a href="#" onclick="showSection('certificates')">📜 자격증</a>
+    <a href="#" onclick="showSection('fc')">📝 대회·공모전</a>
+    <a href="#" onclick="showSection('awards')">🏅 수상</a>
+    <a href="#" onclick="showSection('contact')">📬 연락처</a>
+    <button onclick="toggleDarkMode()">🌗 다크모드</button>
+  </nav>
+
+  <div class="container">
+    <section id="home" class="section active">
+      <h1>안녕하세요, 이은학입니다 👋</h1>
+      <p><span class="highlight">3D 콘텐츠에 대한 전문성</span>과 <span class="highlight">열정</span>을 바탕으로,<br> 함께 성장할 <span class="highlight">준비가된</span> 3D모델러·디자이너입니다.</p>
+    </section>
+
+    <section id="skills" class="section">
+      <h2>🛠 온라인</h2>
+      <ul>
+        <li>🖌 포토샵</li>
+        <li>🎨 블렌더</li>
+        <li>📐 라이노</li>
+        <li>🖼 페인트넷</li>
+      </ul>
+      <br><hr>
+      <h2>⚙️ 오프라인</h2>
+      <ul>
+        <li>🖨️ PLA,ABS 방식 3D프린터</li>
+        <li>🖨️ LCD방식 3D프린터</li>
+        <li>📹 GoPro 9</li>
+        <li>📸 Canon M50</li>
+      </ul>
+    </section>
+
+    <section id="works" class="section">
+      <h2>🎨 작업물</h2>
+      <p>제가 직접 작업한 디자인 결과물들입니다. 아래에 작업물 사진과 설명을 순차적으로 추가할 예정입니다.</p>
+      <br><hr>
+
+      <!-- 무선글루건 -->
+      <p>📌 충북기능경기대회 제품디자인 1과제</p>
+      <img src="https://raw.githubusercontent.com/hak319/-/main/1_Part4.png" alt="무선글루건" style="width:100%; max-width:600px; border-radius:12px; margin: 1rem 0; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+      <p>🔧 <strong>사용튤:</strong> Rhino 8 / PhotoShop</p>
+      <p>🔍 <strong>설명:</strong> 기능경기대회 제품디자인 1과제인 무선글루건 디자인·3D을 제작한 작품입니다.</p>
+      <br><hr>
+
+      <!-- 멀티탭 -->
+      <p>📌 충북기능경기대회 제품디자인 2과제</p>
+      <img src="https://raw.githubusercontent.com/hak319/-/main/2_Part4.png" alt="멀티탭" style="width:100%; max-width:600px; border-radius:12px; margin: 1rem 0; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+      <p>🔧 <strong>사용튤:</strong> Rhino 8 / PhotoShop</p>
+      <p>🔍 <strong>설명:</strong> 기능경기대회 제품디자인 2과제인 멀티탭 디자인·3D을 제작한 작품입니다.</p>
+      <br><hr>
+
+      <!-- 대선주조 슬라이더 -->
+      <p>📌 대선주조 소주 모델링</p>
+      <div class="slider">
+        <div class="slides" id="slides">
+          <img src="https://raw.githubusercontent.com/hak319/-/main/IMG_3025.png" alt="대선주조 이미지 1">
+          <img src="https://raw.githubusercontent.com/hak319/-/main/IMG_3026.jpg" alt="대선주조 이미지 2">
+        </div>
+        <button class="nav-button prev" onclick="moveSlide(-1)">←</button>
+        <button class="nav-button next" onclick="moveSlide(1)">→</button>
+      </div>
+      <p>🔧 <strong>사용툴:</strong> BLENDER 3D / Paint Net / PhotoShop</p>
+      <p>🔍 <strong>설명:</strong> 기능경기대회 준비 중 손풀기 용으로 대선주조의 강알리, 대선 소주의 모델링을 진행하고 렌더링과 광고 형태의 이미지를 제작했습니다.</p>
+      <br><hr>
+
+      <!-- 대전경찰청 장비 제작 -->
+      <p>📌 대전경찰청 경찰장비 제작</p>
+      <img src="https://github.com/hak319/-/raw/main/error.jpg" alt="대전경찰청 작업물" style="width:100%; max-width:600px; border-radius:12px; margin: 1rem 0; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+      <p>🔧 <strong>사용튤:</strong> BLENDER 3D / Paint Net / PhotoShop</p>
+      <p>🔍 <strong>설명:</strong> 해당 작품은 대전경찰청의 요청에 의해 감사장 사진으로 대체되었습니다.</p>
+    </section>
+
+    <section id="certificates" class="section">
+      <h2>📜 자격증 / 면허증</h2>
+      <table>
+        <thead><tr><th>종류</th><th>자격증명</th><th>취득일자</th><th>발행기관</th></tr></thead>
+        <tbody>
+          <tr><td>🚗 운전면허</td><td>1종 보통 수동</td><td>2025.05.02</td><td>충청북도경찰청</td></tr>
+          <tr><td>🚙 운전면허</td><td>2종 보통 자동</td><td>2025.04.30</td><td>충청북도경찰청</td></tr>
+          <tr><td>🎖 국가기술자격증</td><td>제품응용모델링기능사</td><td>2024.04.22</td><td>한국산업인력공단</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="fc" class="section">
+      <h2>📝 대회·공모전</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>대회·공모전명 🏆</th>
+            <th>주최 🏢</th>
+            <th>기간 📅</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>컴퓨터꿈나무축제</td><td>충청북도교육연구정보원</td><td>2023.07. ~ 2023.11.</td></tr>
+          <tr><td>임베디드SW경진대회</td><td>산업통상자원부</td><td>2023.05. ~ 2023.11.</td></tr>
+          <tr><td>스마틴 앱 챌린지</td><td>중소벤처기업부, SK플래닛</td><td>2024.04. ~ 2024.07.</td></tr>
+          <tr><td>충북기능경기대회</td><td>충북기능경기대회위원회, 산업인력공단</td><td>2024.04 ~ 2024.04</td></tr>
+          <tr><td>전국기능경기대회</td><td>고용노동부, 한국산업인력공단</td><td>2024.08 ~ 2024.08</td></tr>
+          <tr><td>K-TECH 아이디어 챌린지</td><td>고용노동부, 한국기술대학교</td><td>2024.05 ~ 2024.07</td></tr>
+          <tr><td>바른 AI‧디지털 생활 창작 공모전</td><td>LG헬로비전, 시청자미디어재단</td><td>2025.04 ~ 2025.07</td></tr>
+          <tr><td>충북상업경진대회</td><td>충청북도교육청</td><td>2025.05 ~ 2025.05</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="awards" class="section">
+      <h2>🏅 수상 이력</h2>
+      <table>
+        <thead><tr><th>수상일자 📅</th><th>수상명 🏆</th><th>수상내용 📄</th><th>수상기관 🏢</th></tr></thead>
+        <tbody>
+          <tr><td>2023.05.26</td><td>대전경찰청장감사장</td><td>경찰장비 모델링 제작</td><td>대전경찰청</td></tr>
+          <tr><td>2024.04.05</td><td>충북지방기능경기대회</td><td>제품디자인 동상</td><td>충북기능경기대회위원회</td></tr>
+          <tr><td>2025.05.29</td><td>충북상업경진대회</td><td>대회홍보크리에이터 금상</td><td>충북교육청</td></tr>
+          <tr><td>2023.11.21</td><td>충북컴퓨터꿈나무축제</td><td>SW, AI 제작 부문 동상</td><td>충북교육연구정보원</td></tr>
+          <tr><td>2024.05.22</td><td>서울경찰청장상장</td><td>타의 모범</td><td>서울경찰청</td></tr>
+          <tr><td>2025.05.19</td><td>충북경찰청장상장</td><td>학교폭력 예방 등 건전한 학교 문화 확립</td><td>충북경찰청</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>📬 연락처</h2>
+      <p>📱 모바일: <a>+82 10-9178-2390</a></p>
+      <p>📧 이메일: <a href="mailto:eunhak0319@gmail.com">eunhak0319@gmail.com</a></p>
+      <p>📝 블로그: <a href="https://blog.naver.com/nsw1ss" target="_blank">https://blog.naver.com/nsw1ss</a></p>
+      <p>📂 깃허브: <a href="https://github.com/hak319" target="_blank">@hak_319</a></p>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
