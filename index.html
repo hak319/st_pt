@@ -96,36 +96,34 @@
       <hr>
 
       <p>📌 아이오닉5 폴리곤 최적화</p>
+
       <div class="slider" style="width:600px; overflow:hidden; margin:0 auto;">
-        <div class="slides" id="slides" style="display:flex; transition: transform 0.5s ease;">
-          <img src="https://raw.githubusercontent.com/hak319/-/main/%EC%B5%9C%EC%A0%81%ED%99%94/%EC%B5%9C%EC%A0%81%ED%99%941.jpg" alt="최적화전 1" style="width:600px; flex-shrink:0;">
-          <img src="https://raw.githubusercontent.com/hak319/-/main/%EC%B5%9C%EC%A0%81%ED%99%94/%EC%B5%9C%EC%A0%81%ED%99%942.jpg" alt="최적화후 1" style="width:600px; flex-shrink:0;">
-          <img src="https://raw.githubusercontent.com/hak319/-/main/%EC%B5%9C%EC%A0%81%ED%99%94/%EC%B5%9C%EC%A0%81%EC%A0%841.jpg" alt="최적화전 2" style="width:600px; flex-shrink:0;">
-          <img src="https://raw.githubusercontent.com/hak319/-/main/%EC%B5%9C%EC%A0%81%ED%99%94/%EC%B5%9C%EC%A0%81%EC%A0%842.jpg" alt="최적화후 2" style="width:600px; flex-shrink:0;">
+        <div id="slides" style="display:flex; width:400%; transition: transform 0.5s ease;">
+          <img src="https://raw.githubusercontent.com/hak319/-/main/%EC%B5%9C%EC%A0%81%ED%99%94/%EC%B5%9C%EC%A0%81%ED%99%941.jpg" alt="최적화전 1" style="width:100%; flex-shrink:0;">
+          <img src="https://raw.githubusercontent.com/hak319/-/main/%EC%B5%9C%EC%A0%81%ED%99%94/%EC%B5%9C%EC%A0%81%ED%99%942.jpg" alt="최적화후 1" style="width:100%; flex-shrink:0;">
+          <img src="https://raw.githubusercontent.com/hak319/-/main/%EC%B5%9C%EC%A0%81%ED%99%94/%EC%B5%9C%EC%A0%81%EC%A0%841.jpg" alt="최적화전 2" style="width:100%; flex-shrink:0;">
+          <img src="https://raw.githubusercontent.com/hak319/-/main/%EC%B5%9C%EC%A0%81%ED%99%94/%EC%B5%9C%EC%A0%81%EC%A0%842.jpg" alt="최적화후 2" style="width:100%; flex-shrink:0;">
         </div>
         <button onclick="moveSlide(-1)">←</button>
         <button onclick="moveSlide(1)">→</button>
       </div>
       
       <p>🔧 <strong>사용툴:</strong> BLENDER 3D</p>
-      <p>🔍 <strong>설명:</strong>1,040K Tri -> 220K Tri로 최적화 및 모델링 수정 (솔리드 / 와이어프레임 사진 첨부)</p>
+      <p>🔍 <strong>설명:</strong> 1,040K Tri -> 220K Tri로 최적화 및 모델링 수정 (솔리드 / 와이어프레임 사진 첨부)</p>
       
       <script>
-        let currentSlide = 0;
+        let index = 0;
       
-        function moveSlide(direction) {
+        function moveSlide(n) {
           const slides = document.getElementById("slides");
           const totalSlides = slides.children.length;
-          const slideWidth = slides.children[0].clientWidth;
-      
-          currentSlide += direction;
-      
-          if (currentSlide < 0) currentSlide = totalSlides - 1;
-          if (currentSlide >= totalSlides) currentSlide = 0;
-      
-          slides.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+          index += n;
+          if (index < 0) index = totalSlides - 1;
+          if (index >= totalSlides) index = 0;
+          slides.style.transform = `translateX(-${index * 100}%)`;
         }
-      </script>      
+      </script>
+      
 
       
     </section>
