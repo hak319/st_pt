@@ -56,3 +56,12 @@ function moveSlideSimple(n) {
 
   slides.style.transform = `translateX(-${index * 100}%)`;
 }
+
+//상장 표출
+function openModal(id) {
+  document.getElementById(`modal-${id}`).style.display = 'block';
+}
+
+function closeModal(id) {
+  document.getElementById(`modal-${id}`).style.display = 'none';
+}
