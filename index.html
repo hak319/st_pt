@@ -55,24 +55,30 @@
       <p>제가 직접 작업한 결과물들입니다. 아래에 작업물 사진과 설명을 순차적으로 추가할 예정입니다.</p>
       <br>
       <p>대선주조 소주 모델링,아이오닉5 최적화의 경우 여러개의 사진이 첨부 되어 있어, 넘겨서 추가 사진 확인이 가능합니다.</p>
+      <p>🔍 이미지를 클릭시 확대하여 볼 수 있습니다!</p>
       <br><hr>
 
       <p>📌 대선주조 소주 모델링</p>
       <div class="slider">
         <div class="slides" id="slides">
-          <img src="https://raw.githubusercontent.com/hak319/-/main/IMG_3025.png" alt="대선주조 1">
-          <img src="https://raw.githubusercontent.com/hak319/-/main/IMG_3026.jpg" alt="대선주조 2">
+          <img src="https://raw.githubusercontent.com/hak319/-/main/IMG_3025.png" alt="대선주조 1" onclick="showWorkImage(this)">
+          <img src="https://raw.githubusercontent.com/hak319/-/main/IMG_3026.jpg" alt="대선주조 2" onclick="showWorkImage(this)">
         </div>
         <button class="nav-button prev" onclick="moveSlideSimple(-1)">←</button>
         <button class="nav-button next" onclick="moveSlideSimple(1)">→</button>
-      </div>
+      </div>      
       <p>🔧 <strong>사용툴:</strong> BLENDER 3D / Paint Net / PhotoShop</p>
       <p>🔍 <strong>설명:</strong> 기능경기대회 준비 중 손풀기 용으로 대선주조의 강알리, 대선 소주의 모델링을 진행하고 렌더링과 광고 형태의 이미지를 제작</p>
       <br>
       <hr>
 
       <p>📌 소방서 차고</p>
-      <img src="https://raw.githubusercontent.com/hak319/-/main/render.png" alt="소방서" style="width:100%; max-width:600px; border-radius:12px; margin: 1rem 0; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+      <img src="https://raw.githubusercontent.com/hak319/-/main/render.png"
+      alt="소방차고"
+      onclick="showWorkImage(this)"
+      style="width:100%; max-width:600px; border-radius:12px; margin: 1rem 0;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1); cursor: zoom-in;"
+      >
       <p>🔧 <strong>사용튤:</strong> BLENDER 3D / Paint Net</p>
       <p>🔍 <strong>설명:</strong> 소방서 차고지를 모티브로 렌더링 및 3D배경 제작</p>
       <br>
@@ -80,43 +86,67 @@
 
       <p>📌 아이오닉5 최적화</p>
       <div class="slider" data-slider-id="slider2">
-        <div class="slides">
-        <img src="https://raw.githubusercontent.com/hak319/-/main/%EC%B5%9C%EC%A0%81%ED%99%94/%EC%B5%9C%EC%A0%81%EC%A0%841.jpg" alt="최적화전 1" />
-          <img src="https://raw.githubusercontent.com/hak319/-/main/%EC%B5%9C%EC%A0%81%ED%99%94/%EC%B5%9C%EC%A0%81%ED%99%941.jpg" alt="최적화후 1" />
-          <img src="https://raw.githubusercontent.com/hak319/-/main/%EC%B5%9C%EC%A0%81%ED%99%94/%EC%B5%9C%EC%A0%81%EC%A0%842.jpg" alt="최적화전 2" />
-          <img src="https://raw.githubusercontent.com/hak319/-/main/%EC%B5%9C%EC%A0%81%ED%99%94/%EC%B5%9C%EC%A0%81%ED%99%942.jpg" alt="최적화후 2" />
-        </div>
-        <button class="nav-button prev" onclick="moveSlide('slider2', -1)">←</button>
-        <button class="nav-button next" onclick="moveSlide('slider2', 1)">→</button>
+        <<div class="slider" data-slider-id="slider2">
+          <div class="slides">
+            <img src="https://raw.githubusercontent.com/hak319/-/main/%EC%B5%9C%EC%A0%81%ED%99%94/%EC%B5%9C%EC%A0%81%EC%A0%841.jpg" alt="최적화전 1" onclick="showWorkImage(this)" />
+            <img src="https://raw.githubusercontent.com/hak319/-/main/%EC%B5%9C%EC%A0%81%ED%99%94/%EC%B5%9C%EC%A0%81%ED%99%941.jpg" alt="최적화후 1" onclick="showWorkImage(this)" />
+            <img src="https://raw.githubusercontent.com/hak319/-/main/%EC%B5%9C%EC%A0%81%ED%99%94/%EC%B5%9C%EC%A0%81%EC%A0%842.jpg" alt="최적화전 2" onclick="showWorkImage(this)" />
+            <img src="https://raw.githubusercontent.com/hak319/-/main/%EC%B5%9C%EC%A0%81%ED%99%94/%EC%B5%9C%EC%A0%81%ED%99%942.jpg" alt="최적화후 2" onclick="showWorkImage(this)" />
+          </div>
+          <button class="nav-button prev" onclick="moveSlide('slider2', -1)">←</button>
+          <button class="nav-button next" onclick="moveSlide('slider2', 1)">→</button>
+        </div>        
       </div>
-      <p>🔧 <strong>사용튤:</strong> BLENDER 3D</p>
-      <p>🔍 <strong>설명:</strong>1,040K Tri -> 220K Tri로 최적화 및 모델링 수정 (솔리드 / 와이어프레임 사진 첨부)</p>
+      <p>🔧 <strong>사용툴:</strong> BLENDER 3D</p>
+      <p>🔍 <strong>설명:</strong> 1,040K Tri → 220K Tri로 최적화 및 모델링 수정 (솔리드 / 와이어프레임 사진 첨부)</p>
       <br>
       <hr>
+      
 
       <p>📌 맨홀 렌더링</p>
-      <img src="https://github.com/hak319/-/raw/main/last%20re.png" alt="맨홀" style="width:100%; max-width:600px; border-radius:12px; margin: 1rem 0; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+      <img src="https://github.com/hak319/-/raw/main/last%20re.png"
+        alt="맨홀"
+        onclick="showWorkImage(this)"
+        style="width:100%; max-width:600px; border-radius:12px; margin: 1rem 0;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.1); cursor: zoom-in;"
+      >
+
       <p>🔧 <strong>사용튤:</strong> BLENDER 3D / PhotoShop / shaderMap 4</p>
       <p>🔍 <strong>설명:</strong> PBR을 이용한 맨홀 모델링, 텍스쳐링 진행</p>
       <br>
       <hr>
 
       <p>📌 렌더링 연습</p>
-      <img src="https://github.com/hak319/-/raw/main/25E76C61-A39F-4E0A-A187-360FA6F66C49.jpg" alt="렌더 연습" style="width:100%; max-width:600px; border-radius:12px; margin: 1rem 0; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+      <img src="https://github.com/hak319/-/raw/main/25E76C61-A39F-4E0A-A187-360FA6F66C49.jpg"
+      alt="렌더연습"
+      onclick="showWorkImage(this)"
+      style="width:100%; max-width:600px; border-radius:12px; margin: 1rem 0;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1); cursor: zoom-in;"
+      >
       <p>🔧 <strong>사용튤:</strong> BLENDER 3D</p>
       <p>🔍 <strong>설명:</strong> 오픈소스를 이용해 쉐이딩수정과 렌더링 설정 진행</p>
       <br>
       <hr>
 
       <p>📌 충북기능경기대회 제품디자인 1과제</p>
-      <img src="https://raw.githubusercontent.com/hak319/-/main/1_Part4.png" alt="무선글루건" style="width:100%; max-width:600px; border-radius:12px; margin: 1rem 0; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+      <img src="https://raw.githubusercontent.com/hak319/-/main/1_Part4.png"
+      alt="글루"
+      onclick="showWorkImage(this)"
+      style="width:100%; max-width:600px; border-radius:12px; margin: 1rem 0;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1); cursor: zoom-in;"
+      >
       <p>🔧 <strong>사용튤:</strong> Rhino 8 / PhotoShop</p>
       <p>🔍 <strong>설명:</strong> 기능경기대회 제품디자인 1과제인 무선글루건 디자인·3D를 제작</p>
       <br>
       <hr>
       
       <p>📌 충북기능경기대회 제품디자인 2과제</p>
-      <img src="https://raw.githubusercontent.com/hak319/-/main/2_Part4.png" alt="멀티탭" style="width:100%; max-width:600px; border-radius:12px; margin: 1rem 0; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+      <img src="https://raw.githubusercontent.com/hak319/-/main/2_Part4.png"
+      alt="멀티"
+      onclick="showWorkImage(this)"
+      style="width:100%; max-width:600px; border-radius:12px; margin: 1rem 0;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1); cursor: zoom-in;"
+      >
       <p>🔧 <strong>사용튤:</strong> Rhino 8 / PhotoShop</p>
       <p>🔍 <strong>설명:</strong> 기능경기대회 제품디자인 2과제인 멀티탭 디자인·3D를 제작</p>
       <br>
@@ -231,5 +261,14 @@
 
   <script src="script.js"></script>
   
+
+  <!-- 작업물 이미지 확대 모달 -->
+<div id="workImageModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); z-index:1000; justify-content:center; align-items:center; flex-direction: column;">
+  <img id="workImage" src="" alt="작업물 이미지" style="max-width:90%; max-height:80vh; border-radius:12px; box-shadow: 0 8px 24px rgba(0,0,0,0.3); margin-bottom: 1rem;" />
+  <button onclick="closeWorkImage()" style="padding: 0.6rem 1.4rem; border:none; border-radius: 8px; background-color: var(--btn-bg); color: white; font-weight: 600; cursor: pointer; box-shadow: 0 4px 12px rgba(0,120,212,0.4); transition: background-color 0.3s ease;">
+    닫기 ✕
+  </button>
+</div>
+
 </body>
 </html>
