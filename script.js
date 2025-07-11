@@ -73,3 +73,31 @@ function closeAwardImage() {
   const modal = document.getElementById('awardImageModal');
   modal.style.display = 'none';
 }
+
+// 작업물 이미지 클릭 확대
+function showWorkImage(imgElement) {
+  const imgUrl = imgElement.getAttribute('src');
+  const modal = document.getElementById('workImageModal');
+  const img = document.getElementById('workImage');
+
+  if(imgUrl) {
+    img.src = imgUrl;
+    modal.style.display = 'flex';
+  }
+}
+
+function closeWorkImage() {
+  document.getElementById('workImageModal').style.display = 'none';
+}
+
+function showWorkImage(imgElement) {
+  // data-full 속성 있으면 원본 URL 사용, 없으면 src 사용
+  const fullImgUrl = imgElement.getAttribute('data-full') || imgElement.src;
+  const modal = document.getElementById('workImageModal');
+  const img = document.getElementById('workImage');
+
+  if(fullImgUrl) {
+    img.src = fullImgUrl;
+    modal.style.display = 'flex';
+  }
+}
