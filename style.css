@@ -22,19 +22,6 @@
   text-decoration: none;
 }
 
-body.dark {
-  --bg-color: #121924;
-  --text-color: #e0e6f0;
-  --primary-color: #1a73e8;
-  --secondary-color: #3c8dde;
-  --accent-color: #4d90fe;
-  --highlight-color: #4d90fe;
-  --nav-bg: #1f2937;
-  --nav-shadow: rgba(77, 144, 254, 0.3);
-  --btn-bg: #3c8dde;
-  --btn-hover-bg: #2566b3;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -218,11 +205,6 @@ table {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-body.dark table {
-  background: #1f2937;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-}
-
 th, td {
   padding: 1rem 1.2rem;
   text-align: left;
@@ -239,9 +221,6 @@ tbody tr {
   transition: background-color 0.3s;
 }
 
-body.dark tbody tr {
-  background-color: #2a3748;
-}
 
 tbody tr:hover {
   background-color: var(--accent-color);
@@ -323,3 +302,88 @@ ul li::before {
 #awardImageModal button:hover {
   background-color: var(--btn-hover-bg);
 }
+
+:root {
+  --bg-color: #f5f7fa;
+  --text-color: #1a1a1a;
+  --primary-color: #004080;
+  --secondary-color: #0078d4;
+  --accent-color: #0096ff;
+  --highlight-color: #0078d4;
+  --nav-bg: #ffffff;
+  --nav-shadow: rgba(0, 64, 128, 0.15);
+  --btn-bg: #0078d4;
+  --btn-hover-bg: #005a9e;
+}
+
+/* 다크모드 변수 */
+body.dark {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --primary-color: #90caf9;
+  --secondary-color: #64b5f6;
+  --accent-color: #42a5f5;
+  --highlight-color: #64b5f6;
+  --nav-bg: #1f1f1f;
+  --nav-shadow: rgba(255, 255, 255, 0.1);
+  --btn-bg: #42a5f5;
+  --btn-hover-bg: #1e88e5;
+}
+
+body.dark {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+body.dark nav {
+  background-color: var(--nav-bg);
+  box-shadow: 0 3px 6px var(--nav-shadow);
+}
+
+body.dark nav a {
+  color: var(--primary-color);
+}
+
+body.dark nav a:hover {
+  background-color: var(--accent-color);
+  color: #000;
+  box-shadow: none;
+}
+
+body.dark .logo {
+  color: var(--primary-color);
+}
+
+/* 표, 표 행, 표 헤더 등 다크모드에 맞게 색상 변경 */
+body.dark table {
+  background: var(--nav-bg);
+  color: var(--text-color);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.05);
+}
+
+body.dark th {
+  background-color: var(--primary-color);
+  color: #000;
+}
+
+body.dark tbody tr {
+  background-color: #2a2a2a;
+}
+
+body.dark tbody tr:hover {
+  background-color: var(--accent-color);
+  color: #000;
+}
+
+/* 버튼 다크모드 */
+body.dark button {
+  background-color: var(--btn-bg);
+  color: #000;
+  box-shadow: 0 4px 12px rgba(66, 165, 245, 0.4);
+}
+
+body.dark button:hover {
+  background-color: var(--btn-hover-bg);
+  box-shadow: 0 6px 18px rgba(30, 136, 229, 0.6);
+}
+
