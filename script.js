@@ -14,10 +14,7 @@ function showSection(id) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
   
-  function toggleDarkMode() {
-    document.body.classList.toggle('dark');
-  }
-  
+
 // 슬라이더 인덱스 관리용 객체
 const sliderIndices = {};
 
@@ -100,4 +97,8 @@ function showWorkImage(imgElement) {
     img.src = fullImgUrl;
     modal.style.display = 'flex';
   }
+}
+
+function toggleDarkMode() {
+  document.body.classList.toggle('dark');
 }
