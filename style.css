@@ -252,29 +252,6 @@ ul li::before {
   transform: translateY(-50%);
 }
 
-/* 슬라이더 */
-.slider {
-  width: 100%;
-  max-width: 800px;
-  margin: 2rem auto;
-  overflow: hidden;
-  position: relative;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-}
-
-.slides {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.slides img {
-  width: 100%;
-  flex-shrink: 0;
-  object-fit: contain;
-  background-color: #fff;
-}
-
 .nav-button {
   position: absolute;
   top: 50%;
@@ -387,3 +364,36 @@ body.dark button:hover {
   box-shadow: 0 6px 18px rgba(30, 136, 229, 0.6);
 }
 
+/* 작업물 섹션 이미지 가운데 정렬 */
+#works img {
+  display: block;
+  margin: 1rem auto; /* 상하 1rem, 좌우 자동 */
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  cursor: zoom-in;
+}
+
+.slider {
+  width: 100%;
+  max-width: 800px; /* 최대 너비 제한 */
+  margin: 2rem auto;
+  overflow: hidden;
+  position: relative;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: contain;
+  background-color: #fff;
+  display: block;
+  margin: 0 auto;
+}
