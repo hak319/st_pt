@@ -9,17 +9,21 @@
 </head>
 <body>
   <nav>
-<a href="#home" class="logo" onclick="showSection('home')">이은학 포트폴리오</a>
+<a href="#home" class="logo" id="logoText" onclick="showSection('home')">이은학 포트폴리오</a>
 
   <div class="nav-links">
     <a href="#" onclick="showSection('home')">🏠 홈</a>
-    <a href="#" onclick="showSection('skills')">🛠 사용튤</a>
+    <a href="#" onclick="showSection('skills')">🛠 기술</a>
     <a href="#" onclick="showSection('works')">🎨 작업물</a>
     <a href="#" onclick="showSection('fc')">📝 대회·공모전</a>
     <a href="#" onclick="showSection('awards')">🏅 수상</a>
     <a href="#" onclick="showSection('contact')">📬 연락처</a>
   </div>
+
   <button onclick="toggleDarkMode()" aria-label="다크모드 전환">🌗 다크모드</button>
+
+
+
 
 </nav>
 
@@ -27,26 +31,26 @@
   <div class="container">
     <section id="home" class="section active">
       <h1>안녕하세요, 이은학입니다 👋</h1>
-      <p><span class="highlight">3D 콘텐츠에 대한 전문성</span>과 <span class="highlight">열정</span>을 바탕으로,<br> 함께 성장할 <span class="highlight">준비가된</span> 3D모델러·디자이너입니다.</p>
+      <p><span class="highlight">3D 배경·오브젝트·제품디자인</span>을 전문으로 <span class="highlight">실무에서 요구하는</span><br> 프로젝트를 제작 할 <span class="highlight">준비가된</span> 3D모델러·디자이너입니다.</p>
     </section>
 
     <section id="skills" class="section">
       <h2>🛠 온라인</h2>
       <ul>
-        <li>🖌 PhotoShop</li>
-        <li>🎨 Blender 3D</li>
-        <li>📐 Rhino 8</li>
-        <li>🖼 Paint Net</li>
-        <li>🔲 shaderMap 4</li>
-        <li>🛠️ VS Code</li>
+        <li>🖌 PhotoShop   (📅2021~)</li>
+        <li>🎨 Blender 3D   (📅2020~)</li>
+        <li>📐 Rhino 8   (📅20204)</li>
+        <li>🖼 Paint Net   (📅2020~)</li>
+        <li>🔲 ShaderMap 4   (📅2021~)</li>
+        <li>🛠️ VS Code   (📅2023~)</li>
       </ul>
       <br><hr>
       <h2>⚙️ 오프라인</h2>
       <ul>
-        <li>🖨️ PLA,ABS 방식 3D프린터</li>
-        <li>🖨️ LCD방식 3D프린터</li>
-        <li>📹 GoPro 9</li>
-        <li>📸 Canon M50</li>
+        <li>🖨️ PLA,ABS 방식 3D프린터   (📅2020~)</li>
+        <li>🖨️ LCD방식 3D프린터   (📅2023~)</li>
+        <li>📹 GoPro 9   (📅2023~)</li>
+        <li>📸 Canon M50   (📅2019~)</li>
       </ul>
     </section>
 
@@ -79,29 +83,10 @@
       style="width:100%; max-width:600px; border-radius:12px; margin: 1rem 0;
       box-shadow: 0 4px 16px rgba(0,0,0,0.1); cursor: zoom-in;"
       >
-      <p>🔧 <strong>사용튤:</strong> BLENDER 3D / Paint Net</p>
+      <p>🔧 <strong>사용튤:</strong> BLENDER 3D / Paint Net / shaderMap 4</p>
       <p>🔍 <strong>설명:</strong> 소방서 차고지를 모티브로 렌더링 및 3D배경 제작</p>
       <br>
       <hr>
-
-      <p>📌 아이오닉5 최적화</p>
-      <div class="slider" data-slider-id="slider2">
-        <<div class="slider" data-slider-id="slider2">
-          <div class="slides">
-            <img src="https://raw.githubusercontent.com/hak319/-/main/%EC%B5%9C%EC%A0%81%ED%99%94/%EC%B5%9C%EC%A0%81%EC%A0%841.jpg" alt="최적화전 1" onclick="showWorkImage(this)" />
-            <img src="https://raw.githubusercontent.com/hak319/-/main/%EC%B5%9C%EC%A0%81%ED%99%94/%EC%B5%9C%EC%A0%81%ED%99%941.jpg" alt="최적화후 1" onclick="showWorkImage(this)" />
-            <img src="https://raw.githubusercontent.com/hak319/-/main/%EC%B5%9C%EC%A0%81%ED%99%94/%EC%B5%9C%EC%A0%81%EC%A0%842.jpg" alt="최적화전 2" onclick="showWorkImage(this)" />
-            <img src="https://raw.githubusercontent.com/hak319/-/main/%EC%B5%9C%EC%A0%81%ED%99%94/%EC%B5%9C%EC%A0%81%ED%99%942.jpg" alt="최적화후 2" onclick="showWorkImage(this)" />
-          </div>
-          <button class="nav-button prev" onclick="moveSlide('slider2', -1)">←</button>
-          <button class="nav-button next" onclick="moveSlide('slider2', 1)">→</button>
-        </div>        
-      </div>
-      <p>🔧 <strong>사용툴:</strong> BLENDER 3D</p>
-      <p>🔍 <strong>설명:</strong> 1,040K Tri → 220K Tri로 최적화 및 모델링 수정 (솔리드 / 와이어프레임 사진 첨부)</p>
-      <br>
-      <hr>
-      
 
       <p>📌 맨홀 렌더링</p>
       <img src="https://github.com/hak319/-/raw/main/last%20re.png"
@@ -111,32 +96,50 @@
         box-shadow: 0 4px 16px rgba(0,0,0,0.1); cursor: zoom-in;"
       >
 
-      <p>🔧 <strong>사용튤:</strong> BLENDER 3D / PhotoShop / shaderMap 4</p>
+      <p>🔧 <strong>사용튤:</strong> BLENDER 3D / PhotoShop / ShaderMap 4</p>
       <p>🔍 <strong>설명:</strong> PBR을 이용한 맨홀 모델링, 텍스쳐링 진행</p>
       <br>
       <hr>
+      
 
-      <p>📌 렌더링 연습</p>
-      <img src="https://github.com/hak319/-/raw/main/25E76C61-A39F-4E0A-A187-360FA6F66C49.jpg"
-      alt="렌더연습"
-      onclick="showWorkImage(this)"
-      style="width:100%; max-width:600px; border-radius:12px; margin: 1rem 0;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.1); cursor: zoom-in;"
+      <p>📌 터널 배경 모델링</p>
+      <img src="https://github.com/hak319/-/raw/main/render2.png"
+        alt="맨홀"
+        onclick="showWorkImage(this)"
+        style="width:100%; max-width:600px; border-radius:12px; margin: 1rem 0;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.1); cursor: zoom-in;"
       >
-      <p>🔧 <strong>사용튤:</strong> BLENDER 3D</p>
-      <p>🔍 <strong>설명:</strong> 오픈소스를 이용해 쉐이딩수정과 렌더링 설정 진행</p>
+
+      <p>🔧 <strong>사용튤:</strong> BLENDER 3D / PhotoShop / ShaderMap 4</p>
+      <p>🔍 <strong>설명:</strong> 한국식 터널을 기반으로 배경용 로우폴리 3D 제작</p>
       <br>
       <hr>
 
       <p>📌 고속도로 톨게이트 오브젝트</p>
-      <img src="https://github.com/hak319/-/raw/main/ssss.png"
+      <img src="https://github.com/hak319/-/raw/main/red.png"
       alt="종합"
       onclick="showWorkImage(this)"
       style="width:100%; max-width:600px; border-radius:12px; margin: 1rem 0;
       box-shadow: 0 4px 16px rgba(0,0,0,0.1); cursor: zoom-in;"
       >
       <p>🔧 <strong>사용튤:</strong> BLENDER 3D / PhotoShop / Paint Net</p>
-      <p>🔍 <strong>설명:</strong> 서충주톨게이트 제작을 위한 오브젝트를 로우폴리(Total 8,292Tri)로 제작</p>
+      <p>🔍 <strong>설명:</strong> 서충주톨게이트 제작을 위한 오브젝트를 로우폴리(Total 8,291Tri)로 제작</p>
+      <br>
+      <hr>
+
+       <p>📌 아이오닉5 최적화</p>
+      <div class="slider" data-slider-id="slider2">
+        <<div class="slider" data-slider-id="slider2">
+          <div class="slides">
+            <img src="https://raw.githubusercontent.com/hak319/-/main/%EC%B5%9C%EC%A0%81%ED%99%94/%EC%B5%9C%EC%A0%81%EC%A0%842.jpg" alt="최적화전 2" onclick="showWorkImage(this)" />
+            <img src="https://raw.githubusercontent.com/hak319/-/main/%EC%B5%9C%EC%A0%81%ED%99%94/%EC%B5%9C%EC%A0%81%ED%99%942.jpg" alt="최적화후 2" onclick="showWorkImage(this)" />
+          </div>
+          <button class="nav-button prev" onclick="moveSlide('slider2', -1)">←</button>
+          <button class="nav-button next" onclick="moveSlide('slider2', 1)">→</button>
+        </div>        
+      </div>
+      <p>🔧 <strong>사용툴:</strong> BLENDER 3D</p>
+      <p>🔍 <strong>설명:</strong> 1,040K Tri → 220K Tri로 최적화 및 모델링 수정</p>
       <br>
       <hr>
 
@@ -189,8 +192,8 @@
           <tr><td>컴퓨터꿈나무축제</td><td>충청북도교육연구정보원</td><td>2023.07. ~ 2023.11.</td></tr>
           <tr><td>충북기능경기대회</td><td>충북기능경기대회위원회, 산업인력공단</td><td>2024.04 ~ 2024.04</td></tr>
           <tr><td>스마틴 앱 챌린지</td><td>중소벤처기업부, SK플래닛</td><td>2024.04. ~ 2024.07.</td></tr>
-          <tr><td>전국기능경기대회</td><td>고용노동부, 한국산업인력공단</td><td>2024.08 ~ 2024.08</td></tr>
           <tr><td>K-TECH 아이디어 챌린지</td><td>고용노동부, 한국기술대학교</td><td>2024.05 ~ 2024.07</td></tr>
+          <tr><td>전국기능경기대회</td><td>고용노동부, 한국산업인력공단</td><td>2024.08 ~ 2024.08</td></tr>
           <tr><td>CJ도너스캠프</td><td>CJ나눔재단</td><td>2025.03 ~ 2025.06</td></tr>
           <tr><td>바른 AI‧디지털 생활 창작 공모전</td><td>LG헬로비전, 시청자미디어재단</td><td>2025.04 ~ 2025.07</td></tr>
           <tr><td>충북상업경진대회</td><td>충청북도교육청</td><td>2025.05 ~ 2025.05</td></tr>
